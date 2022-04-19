@@ -1,22 +1,27 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CountriesList from './component/CountriesList';
-import RegionList from './component/RegionList';
+import { Routes, Route } from 'react-router-dom';
+import { setCountries } from './redux/reducer';
 import Header from './component/Header';
-import Footer from './component/Footer';
+import Home from './component/Home';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setCountries());
+    return () =>{
+
+    };
+  },[]);
+
   return (
-    <Router>
       <div className="App">
-       <Header />
         <Routes>
-          <Route path="/countries" element={<RegionList />} />
-          <Route path="/" exact element={<CountriesList />} />
+          <Route path="/" element={ <Header />} />
+          <Route path="/" exact element={<Home />} />
         </Routes>
-        <Footer />
       </div>
-    </Router>
   );
 }
 
