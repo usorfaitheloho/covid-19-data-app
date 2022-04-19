@@ -10,18 +10,18 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setCountries());
-    return () =>{
+    return () => {
 
     };
-  },[]);
+  }, []);
 
   return (
-      <div className="App">
-        <Routes>
-          <Route path="/" element={ <Header />} />
-          <Route path="/" exact element={<Home />} />
-        </Routes>
-      </div>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Header />} />
+        <Route path="/" exact element={<Home />} />
+      </Routes>
+    </div>
   );
 }
 
