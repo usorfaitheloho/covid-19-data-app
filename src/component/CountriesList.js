@@ -1,10 +1,8 @@
 import React from 'react';
-import './countrieslist';
+import './countrieslist.css';
 
-const CountriesList = () => {
-  return (
-    <div>CountriesList</div>
-  )
-}
+const CountriesList = () => (
+  <div>CountriesList</div>
+);
 
-export default CountriesList
+export default CountriesList;

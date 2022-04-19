@@ -1,10 +1,8 @@
 import React from 'react';
-import './RegionList';
+import './RegionList.css';
 
-const RegionList = () => {
-  return (
-    <div>RegionList</div>
-  )
-}
+const RegionList = () => (
+  <div>RegionList</div>
+);
 
-export default RegionList
+export default RegionList;
