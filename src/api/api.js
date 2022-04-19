@@ -1,9 +1,9 @@
-import axios from 'axios';
-
 const apiUrl = 'https://api.covid19tracking.narrativa.com/api/';
 
+const axios = require('axios');
+
 export default axios.create({
-  baseURl: apiUrl,
+  baseURL: apiUrl,
   headers: {
     'Content-type': 'application/json',
   },
