@@ -16,11 +16,11 @@ const CountriesList = ({ ...props }) => {
   );
 }
 
-CountriesList.propTypes = {
-    country: propTypes.shape({
-        country: propTypes.string,
-        confirmed: propTypes.number,
-    }).isRequired,
-};
+// CountriesList.propTypes = {
+//     country: propTypes.shape({
+//         country: propTypes.string,
+//         confirmed: propTypes.number,
+//     }).isRequired,
+// };
 
 export default CountriesList;
