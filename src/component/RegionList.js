@@ -1,11 +1,24 @@
 import React from 'react';
 import './RegionList.css';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 function Regions() {
-    const regions = useParams().Regions
+    const country = useParams().Regions
+    const regions = useSelector(state=>state.regions)
     console.log('regions',regions)
   return (
-    <div><h3> Region :{regions}</h3></div>
+    <div><h3> country :{country}</h3>
+     <ul>
+         {
+             regions.map(region =>{
+                 return (
+                     <li key={region.id}>{region.id} : {region.today_confirmed}</li>
+                 )
+             })
+         }
+     </ul>
+    </div>
   )
 }
 

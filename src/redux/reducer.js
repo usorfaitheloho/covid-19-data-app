@@ -13,7 +13,7 @@ export const countrieslistsReducer = (state = initialState, action) => {
   }
 };
 
-const refactorResponse = (response) => Object.values(response.data.dates['2022-04-12'].countries);
+const refactorResponse = (response) => Object.values(response.data.dates['2022-04-12'].countries).filter(item => item.regions.length > 0);
 
 export const setCountries = () => async (dispatch) => {
   const response = await apiStoreService.apiGetAll();

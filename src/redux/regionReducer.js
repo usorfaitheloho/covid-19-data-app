@@ -6,6 +6,12 @@ const getRegion = () => ({
     type: SET_REGIONS,
 });
 
+export const setRegions = (regions) => {
+console.log('from region reducer', regions)
+return { type: SET_REGIONS, regions };
+};
+
+
 export function regionsReducer (state= regionsState, action) {
   switch(action.type) {
       case SET_REGIONS:
@@ -17,7 +23,3 @@ export function regionsReducer (state= regionsState, action) {
 };
 
 
-export const setRegions = (regions) => {
-console.log('from region reducer', regions)
-return { type: SET_REGIONS, regions };
-};

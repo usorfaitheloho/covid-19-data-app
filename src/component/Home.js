@@ -4,7 +4,7 @@ import CountriesList from './CountriesList';
 import './Home.css';
 
 function Home() {
-  const data = useSelector((state) => state);
+  const data = useSelector((state) => state.countries);
   console.log('from home', data);
   return (
     <div className="home_container">
@@ -12,7 +12,7 @@ function Home() {
       <div className="home_country_list">
         {data.map(
           (item) => (
-            <CountriesList key={item.id} country={item.id} confirmed={item.today_confirmed} />
+            <CountriesList key={item.id} country={item} />
           ),
         )}
       </div>
