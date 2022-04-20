@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import { setCountries } from './redux/reducer';
 import Header from './component/Header';
 import Home from './component/Home';
+import RegionList from './component/RegionList';
 
 function App() {
   const dispatch = useDispatch();
@@ -18,8 +19,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Header />} />
-        <Route path="/" exact element={<Home />} />
+      <Route path="/" element={<Header />}>
+          <Route path="/" element={<Home />} />
+          <Route path='/:RegionsList' element={<RegionList />} />
+        </Route>
       </Routes>
     </div>
   );
