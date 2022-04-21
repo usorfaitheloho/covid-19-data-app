@@ -40,11 +40,10 @@ button {
   margin: 0;
   background: none;
 }
-body {
+/* body {
   display: flex;
   height: 100vh;
   align-content: flex-start;
   overflow-x: hidden;
   border-radius: 4px;
-  background-color :rgb(236,76,138);
-}
+} */
