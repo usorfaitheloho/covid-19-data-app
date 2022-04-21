@@ -8,30 +8,32 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 export default function Header() {
   const dispatch = useDispatch();
-  const header_state = useSelector((state) => state.header);
+  const headerState = useSelector((state) => state.header);
   const countriesState = useSelector((state) => state.countries);
-  console.log('header_component', header_state.global_cases);
+  console.log('header_component', headerState.global_cases);
   const handleClick = (global_cases) => {
-    dispatch(setHeader({ global_cases, img: '' }));
+    dispatch(setHeader({ global_cases, img: 'https://mapsvg.com/static/maps/geo-calibrated/world.svg' }));
   };
   return (
     <div>
       <header>
         <nav>
           <Link to="/" onClick={() => handleClick(countriesState.global_cases)}>
-            <i className="fas fa-chevron-left" />
+            <i className="fas fa-home" />
 
           </Link>
-          <span> Most cases </span>
+          <strong> Covid-19 Data </strong>
           <div>
             <i className="fas fa-microphone" />
             <i className="fas fa-cog" />
           </div>
         </nav>
-        <div className='header_img'  >  
-        <img src='https://mapsvg.com/static/maps/geo-calibrated/world.svg' alt='map' />
-        <strong> 
-          {header_state.global_cases > 0 ? 'global_cases :'+header_state.global_cases: 'loading'}
+        {/* */}
+        <div className='header_img' 
+        style={{backgroundImage:`url(${headerState.img})`}} >  
+        {/* <img src='https://mapsvg.com/static/maps/geo-calibrated/world.svg' alt='map' /> */}
+        <strong style={{marginRight:'5%'}}> 
+          {headerState.global_cases > 0 ? 'Total :'+headerState.global_cases: 'loading'}
         </strong>
         </div>
       </header>
