@@ -1,5 +1,5 @@
 import apiStoreService from '../api/apiServices';
-import incSortByCases from '../services';
+import {incSortByCases,updateCountryNames, numberWithSpaces } from '../services';
 
 export const initialState = {
   countries: [],
@@ -23,6 +23,6 @@ export const setCountries = () => async (dispatch) => {
   const response = await apiStoreService.apiGetAll();
   const countries = refactorResponse(response);
   const global_cases = countries.reduce((a, b) => a + b.today_confirmed, 0);
-  console.log('from reducer', incSortByCases(countries).reverse());
-  dispatch({ type: SET_ALL, data: { countries, global_cases } });
+  console.log('from reducer', incSortByCases(countries).reverse(), global_cases);
+  dispatch({ type: SET_ALL, data: { countries : updateCountryNames(countries), global_cases:global_cases} });
 };

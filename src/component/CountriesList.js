@@ -12,7 +12,7 @@ const CountriesList = ({ ...props }) => {
   const imgUrl = 'https://mapsvg.com/static/maps/geo-calibrated'+link+'.svg'
   const handleClick = (country) => {
     dispatch(setRegions(country.regions));
-    dispatch(setHeader({ global_cases: country.today_confirmed, img: imgUrl }));
+    dispatch(setHeader({ global_cases: country.today_confirmed, img: imgUrl  , country: country.name}));
   };
   return (
     <div className="country_container">
