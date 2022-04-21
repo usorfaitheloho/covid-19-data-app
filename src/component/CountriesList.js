@@ -6,13 +6,13 @@ import { setRegions } from '../redux/regionReducer';
 import { setHeader } from '../redux/headerReducer';
 
 const CountriesList = ({ ...props }) => {
- const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { country } = props;
   const link = `/${country.id}`;
   const handleClick = (country) => {
     dispatch(setRegions(country.regions));
-    dispatch(setHeader({ global_cases: country.today_confirmed, img: ''}));
-  }
+    dispatch(setHeader({ global_cases: country.today_confirmed, img: '' }));
+  };
   return (
     <div className="country_container">
       <Link to={link} onClick={() => handleClick(country)}><i className="fas fa-sign-in-alt" /></Link>
@@ -22,7 +22,7 @@ const CountriesList = ({ ...props }) => {
       </div>
     </div>
   );
-}
+};
 
 // CountriesList.propTypes = {
 //     country: propTypes.shape({

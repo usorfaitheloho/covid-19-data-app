@@ -14,17 +14,15 @@ function App() {
 
   useEffect(() => {
     dispatch(setCountries());
-  
   }, []);
   useEffect(() => {
-    dispatch(setHeader({ global_cases: countriesState.global_cases, img: ''}));
+    dispatch(setHeader({ global_cases: countriesState.global_cases, img: '' }));
   }, [countriesState]);
-
 
   return (
     <div className="App">
       <Routes>
-      <Route path="/" element={<Header />}>
+        <Route path="/" element={<Header />}>
           <Route path="/" element={<Home />} />
           <Route path="/:RegionsList" element={<RegionList />} />
         </Route>

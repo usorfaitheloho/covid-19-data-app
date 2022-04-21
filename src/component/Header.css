@@ -1,4 +1,4 @@
-.header{
+/* .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,4 +35,15 @@
 
 .icon:hover {
     cursor: pointer;
+  } */
+
+  header{ 
+    height:25vh;
+
+    }
+  
+  nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
   }
