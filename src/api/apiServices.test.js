@@ -14,7 +14,7 @@ const expected = {
                       name: 'Zimbabwe',
                       regions: [],
                       source: 'John Hopkins University',
-                      today_confirmed:  247383,
+                      today_confirmed: 247383,
                     },
                   },
                 },
