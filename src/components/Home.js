@@ -8,13 +8,14 @@ function Home() {
   const data = useSelector((state) => state.countries);
   const [searchCountry, setsearchCountry] = useState(data.countries);
   const [searchName, setSearchName] = useState('');
-
   useEffect(() => {
     setsearchCountry(data.countries);
   }, [data]);
   useEffect(() => {
     const search = searchName.trim().toLowerCase();
-    setsearchCountry(data.countries.filter((country) => country.name.toLowerCase().includes(search)));
+    setsearchCountry(data.countries.filter(
+      (country) => country.name.toLowerCase().includes(search),
+    ));
   }, [searchName]);
 
   const filterByName = (e) => {

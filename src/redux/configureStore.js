@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { countriesReducer, initialState } from './reducer';
+import { countriesReducer, initialState } from './allReducer';
 import { regionsReducer, regionsState } from './regionReducer';
 import { headerReducer, headerState } from './headerReducer';
 

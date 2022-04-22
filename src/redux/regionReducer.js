@@ -15,4 +15,3 @@ export const setRegions = (regions) => {
   const data = (regions.length === 0) ? [] : regions;
   return { type: SET_REGIONS, data };
 };
-
