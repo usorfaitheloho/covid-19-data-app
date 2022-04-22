@@ -17,7 +17,7 @@ you can watch my video presentation here[this video](https://www.loom.com/share/
 
 
 ## Live Demo
-[Covid Tracker Live Demo](https://bright-moonbeam-27f9a1.netlify.app/)
+[Covid Tracker Live Demo](https://https://covid-19-data-app.netlify.app/)
 
 ## Built With
 - React
