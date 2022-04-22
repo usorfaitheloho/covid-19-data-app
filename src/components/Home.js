@@ -6,15 +6,15 @@ import load from '../assets/loading.gif';
 
 function Home() {
   const data = useSelector((state) => state.countries);
-  const [visibleData, setVisibleData] = useState(data.countries);
+  const [searchCountry, setsearchCountry] = useState(data.countries);
   const [searchName, setSearchName] = useState('');
 
   useEffect(() => {
-    setVisibleData(data.countries);
+    setsearchCountry(data.countries);
   }, [data]);
   useEffect(() => {
     const search = searchName.trim().toLowerCase();
-    setVisibleData(data.countries.filter((country) => country.name.toLowerCase().includes(search)));
+    setsearchCountry(data.countries.filter((country) => country.name.toLowerCase().includes(search)));
   }, [searchName]);
 
   const filterByName = (e) => {
@@ -24,8 +24,8 @@ function Home() {
     <div className="home_container">
       <input name="countryName" type="text" placeholder="search country" onChange={filterByName} value={searchName} />
       <div className="home_country_list">
-        {visibleData.length > 0
-          ? visibleData.map(
+        {searchCountry.length > 0
+          ? searchCountry.map(
             (item) => (
               <Country
                 key={item.id}

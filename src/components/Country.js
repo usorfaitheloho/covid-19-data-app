@@ -23,7 +23,6 @@ function Country({ ...props }) {
   };
   return (
     <div className="country_container">
-      {/* <img src={imgUrl} alt='map' /> */}
       <div className="country_img" style={{ backgroundImage: `url(${imgUrl})` }} />
       <div className="country_info_side">
         <Link to={link} onClick={() => handleClick()}><i className="fas fa-sign-in-alt" /></Link>

@@ -1,11 +1,11 @@
 header {
   height: 42vh;
-  background-color: #3ad3c5;
+  background-color: #5788e5;
 }
 
 nav {
   padding: 2vh 2%;
-  background-color: #00455b;
+  background-color: #4366ae;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,7 +31,7 @@ nav * {
 .giphy-embed {
   width: 48px;
   height: 48px;
-  color: #4ce9e4;
+  color: #5788e5;
   background: transparent;
   border: none;
 }

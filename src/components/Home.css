@@ -3,8 +3,8 @@ input {
   margin-bottom: 2vh;
   margin-left: 10px;
   height: 37px;
-  border: 1px solid #047267;
-  box-shadow: 2px 2px 3px #009688;
+  border: 1px solid #5177b3;
+  box-shadow: 2px 2px 3px #5177b3;
   border-radius: 5px;
   width: 250px;
   padding-left: 5px;
@@ -18,7 +18,7 @@ input {
 }
 
 .home_country_list > div:nth-child(2n+1) {
-  background-color: #009688;
+  background-color: #5788e5;
   opacity: 0.9;
 }
 

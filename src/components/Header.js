@@ -20,9 +20,8 @@ function Header() {
             <i className="fas fa-home" />
             {' '}
           </Link>
-          <strong>covid19 Tracker</strong>
+          <strong>covid19 Data App</strong>
           <div>
-            <i className="fas fa-microphone" />
             <i className="fas fa-cog" />
           </div>
         </nav>

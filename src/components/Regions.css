@@ -1,6 +1,6 @@
 .Regions_container {
   text-align: center;
-  background-color: #009688;
+  background-color: #4366ae;
   border: 1px solid #00455b;
   min-height: 70vh;
 }
@@ -23,7 +23,7 @@
 }
 
 .Regions_container li:nth-child(2n) {
-  background-color: #009688;
+  background-color: #4366ae;
 }
 
 .regions_error {
