@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import { setCountries } from './redux/reducer';
+import Header from './component/Header';
+import Home from './component/Home';
+import RegionList from './component/RegionList';
+import { setHeader } from './redux/headerReducer';
 
 function App() {
+  const dispatch = useDispatch();
+  const countriesState = useSelector((state) => state.countries);
+
+  useEffect(() => {
+    dispatch(setCountries());
+  }, []);
+  useEffect(() => {
+    dispatch(setHeader({ global_cases: countriesState.global_cases, img: '' }));
+  }, [countriesState]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/:RegionsList" element={<RegionList />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
