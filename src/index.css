@@ -4,16 +4,12 @@
 
 :root {
   --color: rgb(20 11 11 / 69%);
-  --padding: 20px 30px;
   --lato-font: 'Lato', 'gill-sans';
 }
 
 *,
 ::before,
 ::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -22,7 +18,6 @@ html {
   font-size: 1rem;
   font-style: normal;
   font-weight: normal;
-  color: var(--color);
 }
 
 ul {
@@ -34,17 +29,6 @@ a {
   color: var(--color);
 }
 
-button {
-  border: none;
-  padding: 0;
-  margin: 0;
-  background: none;
-}
 body {
-  display: flex;
-  height: 100vh;
-  align-content: flex-start;
-  overflow-x: hidden;
-  border-radius: 4px;
-  background-color :rgb(236,76,138);
+  background-color: #5177b3;
 }

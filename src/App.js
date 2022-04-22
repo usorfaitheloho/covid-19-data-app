@@ -1,22 +1,26 @@
 import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import { setCountries } from './redux/reducer';
-import Header from './component/Header';
-import Home from './component/Home';
-import RegionList from './component/RegionList';
+import { setCountries } from './redux/allReducer';
+import Home from './components/Home';
+import Header from './components/Header';
+import Regions from './components/Regions';
 import { setHeader } from './redux/headerReducer';
 
 function App() {
   const dispatch = useDispatch();
   const countriesState = useSelector((state) => state.countries);
-
+  const todayDate = (new Date()).toISOString().split('T')[0];
   useEffect(() => {
-    dispatch(setCountries());
+    dispatch(setCountries(todayDate));
   }, []);
   useEffect(() => {
-    dispatch(setHeader({ global_cases: countriesState.global_cases, img: '' }));
+    dispatch(setHeader({
+      globalCases: countriesState.globalCases,
+      img: 'https://mapsvg.com/static/maps/geo-calibrated/world.svg',
+      country: 'Global',
+    }));
   }, [countriesState]);
 
   return (
@@ -24,7 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Header />}>
           <Route path="/" element={<Home />} />
-          <Route path="/:RegionsList" element={<RegionList />} />
+          <Route path="/:Regions" element={<Regions />} />
         </Route>
       </Routes>
     </div>
