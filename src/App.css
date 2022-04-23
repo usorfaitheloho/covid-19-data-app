@@ -1,0 +1,10 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.App {
+  margin: auto;
+  max-width: 100vw;
+  background-color: #4366ae;
+}
