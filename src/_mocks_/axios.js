@@ -4,21 +4,22 @@ export default {
     data: {
       dates: {
         [todayDate]:
-                                {
-                                  countries: {
-                                    Zimbabwe:
-                                        {
-                                          date: [todayDate],
-                                          id: 'zimbabwe',
-                                          links: [{}],
-                                          name: 'Zimbabwe',
-                                          regions: [],
-                                          source: 'John Hopkins University',
-                                          today_confirmed: 247383,
-                                        },
-                                  },
-                                },
+                        {
+                          countries: {
+                            Afghanistan:
+                            {
+                              date: [todayDate],
+                              id: 'afghanistan',
+                              links: [{}],
+                              name: 'Afghanistan',
+                              regions: [],
+                              source: 'John Hopkins University',
+                              today_confirmed: 178638,
+                            },
+                          },
+                        },
       },
     },
+
   }),
 };

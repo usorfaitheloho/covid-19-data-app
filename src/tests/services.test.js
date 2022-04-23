@@ -7,17 +7,17 @@ describe('covid19 tracker services', () => {
   it('should reformulate names and regions', async () => {
     const entry = [
       {
-        date: '2022-04-22',
+        date: '2022-04-12',
         id: 'us',
         links: [],
         name: 'US',
         name_es: 'EE.UU.',
         name_it: 'Stati Uniti',
         regions: [{
-          date: '2022-04-22', id: 'iowa', links: [], name: 'Iowa', name_es: 'Iowa', today_confirmed: 760025,
+          date: '2022-04-12', id: 'iowa', links: [], name: 'Iowa', name_es: 'Iowa', today_confirmed: 760025,
         },
         {
-          date: '2022-04-22', id: 'minnesota', links: [], name: 'Minnesota', name_es: 'Minnesota', today_confirmed: 1435232,
+          date: '2022-04-12', id: 'minnesota', links: [], name: 'Minnesota', name_es: 'Minnesota', today_confirmed: 1435232,
         },
         ],
         source: 'John Hopkins University',
